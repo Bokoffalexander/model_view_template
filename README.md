@@ -1,6 +1,6 @@
 # Steps
 
-1. models.py (app)
+## 1. models.py (app)
 ```
 class Topic(models.Model):
 
@@ -12,27 +12,27 @@ class Topic(models.Model):
     
         return self.text
 ```
-2. settings.py (project)
+## 2. settings.py (project)
 ```
 INSTALLED_APPS =['topic']
 ```
-3. admin.py (app)
+## 3. admin.py (app)
 ```
 from .models import Topic
 
 admin.site.register(Topic)
 ```
-4. urls.py (project)
+## 4. urls.py (project)
 ```
 path("", include('topic.urls'))
 ```
-5. urls.py (app)
+## 5. urls.py (app)
 ```
 from . import views
 
 path("", views.topics, name='topics')
 ```
-6. views.py (app)
+## 6. views.py (app)
 ```
 from .models import Topic
 
@@ -42,7 +42,7 @@ def topics(request):
     
     return render(request, 'topics.html', {'topics':topics})
 ```
-7. templates/topics.html (app)
+## 7. templates/topics.html (app)
 
 ```
 <p> Topics </p>
