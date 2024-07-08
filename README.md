@@ -34,17 +34,19 @@ path("", views.topics, name='topics')
 
 6. views.py (app)
 
+from .models import Topic
+
 def topics(request):
     
     topics = Topic.objects.order_by('date_added')
     
-    context = {'topics':topics}
-    
-    return render(request, 'topics.html', context)
+    return render(request, 'topics.html', {'topics':topics})
     
 7. templates/topics.html (app)
 
+<code>
 <p> Topics </p>
+</code>
 
 <ul>
     
