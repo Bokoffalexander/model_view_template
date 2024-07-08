@@ -44,9 +44,9 @@ def topics(request):
     
 7. templates/topics.html (app)
 
-<code>
+```
 <p> Topics </p>
-</code>
+
 
 <ul>
     
@@ -57,5 +57,5 @@ def topics(request):
     {% endfor %}
     
 </ul>
-
+```
 
