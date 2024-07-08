@@ -18,6 +18,8 @@ INSTALLED_APPS =[]
 
 3. admin.py (app)
 
+from .models import Topic
+
 admin.site.register(Topic)
 
 4. urls.py (project)
