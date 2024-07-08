@@ -14,9 +14,10 @@ admin.site.register(Topic)
 
 4. urls.py (project)
 
-path("", include('app.urls'))
+path("", include('topic.urls'))
 
 5. urls.py (app)
+
 from . import views
 
 path("", views.topics, name='topics')
